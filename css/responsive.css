@@ -1,0 +1,310 @@
+@media (min-width: 1200px) {
+    html {
+        font-size: 118.75%;
+    }
+    #home_image {
+        top: 100px;
+    }
+    #logo {
+margin-top: 150px;
+margin-bottom: 0.4rem;
+opacity: 1;
+}
+
+}
+@media (max-width: 1200px) {
+    html {
+        font-size: 97.75%;
+    }
+
+    #logo {
+        margin-top: 7rem;
+    }
+
+    #slogan h1{
+        font-size: 22pt;
+        line-height: 1;     
+    }
+
+
+    #home_image {
+        top: 120px;
+      
+
+    }
+
+}
+
+@media (max-width: 990px) {
+    p{
+        font-size: 90%;
+    }
+    h1 {
+     font-size: 18pt;
+
+}
+    #logo h1 a {
+    font: normal 38pt 'Pacifico',arial,sans-serif;
+
+    }
+
+    #home_image {
+        top: 100px;
+
+    }
+    figure{
+        display: none !important;
+    }
+
+    i {
+        display: none !important;
+    }
+
+    #features_3 {
+
+height: 35.2rem;
+
+    }
+      .scrollto p {
+       display: none;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .navbar-fixed-top{
+        display: none;
+    }
+
+    #logo {
+        margin-top: 6rem;
+    }
+
+
+    #homescreen { 
+      text-align: center;
+      font-size: 100%;
+    } 
+
+    #slogan h1{
+        padding-bottom: 10px; 
+        
+    }
+
+    #slogan {
+        padding: 0 40px;   
+    }
+
+    #home_image {
+        top: 10px;
+        position: relative;
+        margin: 0 auto;
+
+    }
+    #home {
+        height: 705px;
+    }
+
+    .scrollto p {
+       display: none;
+    }
+
+
+
+
+
+    #features_1, #features_2 {
+    text-align:center;
+    }
+    
+
+    .feature_icon {
+    float:none;
+    width:3rem;
+    height:3rem;
+    margin-bottom: 1rem;
+    margin-right:0;
+    }
+
+    
+    #about {
+    margin-bottom:4.568em;
+    }
+    
+    p {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    #features_3 {
+        height:auto;
+    }
+    #features_3_content_left {
+        text-align:center;
+        padding-bottom:6.5rem;
+        padding-right:1rem;
+    }
+
+    #features_3_content_right {
+        text-align:center;
+        padding-left:1rem;
+
+    }
+
+    #features_3_content_center img{
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    
+    
+
+
+}
+
+@media (max-width: 700px) {
+    
+
+    #logo {
+        margin-top: 2rem;
+    }
+
+
+    #homescreen { 
+      text-align: center;
+      font-size: 100%;
+    } 
+
+    #slogan h1{
+        padding-bottom: 10px; 
+        
+    }
+
+    #slogan {
+        padding: 0 40px;   
+    }
+
+    #home_image {
+        top: 10px;
+        position: relative;
+        margin: 0 auto;
+
+    }
+    #home {
+        height: 705px;
+    }
+    
+    .scrollto p {
+       display: none;
+    }
+       
+
+    #features_1, #features_2 {
+    text-align:center;
+    }
+    
+
+    .feature_icon {
+    float:none;
+    width:3rem;
+    height:3rem;
+    margin-bottom: 1rem;
+    margin-right:0;
+    }
+
+    
+    #about {
+    margin-bottom:4.568em;
+    }
+    
+    p {
+        font-size: 110%;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    #features_3 {
+        height:auto;
+    }
+    #features_3_content_left {
+        text-align:center;
+        padding-bottom:6.5rem;
+        padding-right:1rem;
+    }
+
+    #features_3_content_right {
+        text-align:center;
+        padding-left:1rem;
+
+    }
+
+    #features_3_content_center img{
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    
+    #logo {
+        margin-top: 1rem;
+    }
+    
+
+
+}
+
+@media (max-width: 480px) {
+
+
+    #logo {
+        margin-top: 2rem;
+    }
+
+
+    #homescreen { 
+      text-align: center;
+      font-size: 100%;
+    } 
+
+    #slogan h1{
+        padding-bottom: 10px; 
+        
+    }
+
+    #slogan {
+        padding: 0 40px;   
+    }
+
+    #home_image {
+        top: 10px;
+        position: relative;
+        margin: 0 auto;
+
+    }
+    #home {
+        height: 705px;
+    }
+    
+    .scrollto p {
+       display: none;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h1 {font-size:2rem;}
+    #logo_header {margin-bottom:2em }
+    
+    #logo {
+        margin-top: 1rem;text-align: center;
+    }
+
+
+    .cta1 {
+
+margin-top: 10px;
+
+}
+
+}
