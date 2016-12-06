@@ -1,8 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300,700);
 
 
 .demo_changer{
-    z-index: 900; 
+    z-index: 900;
     position: fixed;
     left: -140px;
     top: 110px;
@@ -16,7 +16,7 @@
 }
 
 
-span a {    color:red; margin-top:20px; margin-bottom:20px; 
+span a {    color:red; margin-top:20px; margin-bottom:20px;
     font-size: 16px;
 	line-height: 22px;
     font-family: 'Oxygen', sans-serif;
@@ -35,7 +35,7 @@ span a:active {opacity:1; color:#7F7F7F;
 
 .demo_changer .demo-icon{
     background: url(../images/switcher/color.png) no-repeat scroll 4px 0 #fff;
-    
+
     cursor: pointer;
     float: right;
     height: 40px;
@@ -50,7 +50,7 @@ span a:active {opacity:1; color:#7F7F7F;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
 
-    
+
     }
 .form_holder {marign-right:20px;}
 
@@ -117,7 +117,4 @@ span a:active {opacity:1; color:#7F7F7F;
 .demo_changer{
     display: none;
 }
-} 
-
-
-
+}
