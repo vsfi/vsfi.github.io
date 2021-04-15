@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'AMG Anahit';
-    src: url('anahit-regular.eot');
-    src: url('anahit-regular.eot?#iefix') format('embedded-opentype'),
-         url('anahit-regular.woff') format('woff'),
-         url('anahit-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
