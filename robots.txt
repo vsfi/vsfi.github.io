@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /*.psd$
+Sitemap: https://vsfi.org/sitemap.xml
