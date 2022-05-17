@@ -23,13 +23,11 @@
         }
         gtag('js', new Date());
         gtag('config', 'UA-111652431-1');
-        dataLayer.push({
-            'event': 'gtm_redirect_url',
-            'gtm_redirect_url': 'https://forms.gle/WCwJy8eGMckdwX3P9',
-            'eventCallback': function () {
+        gtag('event', 'page_view', {
+            'event_callback': function () {
                 setTimeout(function () {
                     window.location = 'https://forms.gle/WCwJy8eGMckdwX3P9'
-                }, 1000)
+                }, 300)
             }
         });
     </script>
