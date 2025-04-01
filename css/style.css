@@ -1524,3 +1524,26 @@ img.soc-link {
     line-height: 0px;
   }
 }
+/* sticky header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #f4880c; 
+  color: white; 
+  padding: 10px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.sticky-content {
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+.sticky-content a {
+  color: white; 
+  text-decoration: underline;
+}
