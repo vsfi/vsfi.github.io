@@ -8,6 +8,7 @@ function loadSiteData() {
 }
 
 export default defineConfig({
+    base: './',
     appType: 'mpa',
     publicDir: 'public',
     plugins: [
