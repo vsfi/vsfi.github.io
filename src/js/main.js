@@ -5,6 +5,21 @@ import '../css/style.css';
 import '../css/responsive.css';
 
 /*====================================*/
+/* Mobile nav toggle */
+/*====================================*/
+const navToggle = document.querySelector('.nav-toggle');
+const navbar = document.querySelector('.navbar');
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navbar.classList.toggle('nav-open');
+    });
+    // Close on nav link click
+    navbar.querySelectorAll('.navbar-links a').forEach((link) => {
+        link.addEventListener('click', () => navbar.classList.remove('nav-open'));
+    });
+}
+
+/*====================================*/
 /* Scroll animations */
 /*====================================*/
 const observer = new IntersectionObserver(

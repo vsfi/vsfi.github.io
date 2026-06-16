@@ -8,6 +8,10 @@
         font-size: 95%;
     }
 
+    .announcement-banner {
+        font-size: 0.75rem;
+    }
+
     body {
         padding-top: calc(var(--nav-height) + var(--banner-height));
     }
@@ -17,8 +21,8 @@
     }
 
     .navbar-links a {
-        padding: 0.5rem 0.625rem;
-        font-size: 0.75rem;
+        padding: 0.35rem 0.5rem;
+        font-size: 0.7rem;
     }
 
     section {
@@ -78,14 +82,6 @@
         padding: 0 1.25rem;
     }
 
-    .navbar-links {
-        gap: 0;
-    }
-
-    .navbar-links a {
-        padding: 0.4rem 0.5rem;
-        font-size: 0.6875rem;
-    }
 
     section {
         padding: 3rem 0;

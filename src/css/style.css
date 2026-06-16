@@ -119,7 +119,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    height: var(--banner-height);
+    min-height: var(--banner-height);
     background: var(--color-accent);
     color: var(--color-white);
     display: flex;
@@ -128,6 +128,9 @@ section {
     font-size: 0.875rem;
     font-weight: 600;
     z-index: 1000;
+    padding: 0.25rem 1rem;
+    text-align: center;
+    line-height: 1.3;
 }
 
 .announcement-banner a {
@@ -207,6 +210,69 @@ section {
 
 .navbar-links .nav-bashwars {
     color: var(--color-accent);
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.nav-open .nav-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        width: 100%;
+        background: var(--color-bg);
+        flex-direction: column;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-open .navbar-links {
+        display: flex;
+    }
+
+    .navbar-links a {
+        padding: 0.75rem 0;
+        font-size: 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    }
 }
 
 /*====================================*/
