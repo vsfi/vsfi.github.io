@@ -231,7 +231,9 @@ section {
     height: 2px;
     background: var(--color-text);
     border-radius: 2px;
-    transition: transform 0.2s, opacity 0.2s;
+    transition:
+        transform 0.2s,
+        opacity 0.2s;
 }
 
 .nav-open .nav-toggle span:nth-child(1) {

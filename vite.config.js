@@ -14,7 +14,7 @@ export default defineConfig({
     plugins: [
         nunjucks({
             templatesDir: '.',
-            variables: { '*': loadSiteData() },
+            variables: { '*': loadSiteData() }
         }),
         {
             name: 'dev-server-config',
@@ -30,15 +30,15 @@ export default defineConfig({
                 if (file.includes('data/site.json') || file.endsWith('index.html')) {
                     server.ws.send({ type: 'full-reload' });
                 }
-            },
-        },
+            }
+        }
     ],
     build: {
         rollupOptions: {
             input: {
-                main: resolve(__dirname, 'index.html'),
-            },
+                main: resolve(__dirname, 'index.html')
+            }
         },
-        outDir: 'dist',
-    },
+        outDir: 'dist'
+    }
 });

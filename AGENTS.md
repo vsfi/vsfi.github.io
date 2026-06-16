@@ -50,10 +50,10 @@ npm run format:check  # check formatting without writing
 ## Design tokens
 
 ```css
---color-accent: #3B82F6;     /* steel blue */
---color-bg: #FFFFFF;
---color-bg-alt: #F8FAFC;
---color-footer: #1E293B;
+--color-accent: #3b82f6; /* steel blue */
+--color-bg: #ffffff;
+--color-bg-alt: #f8fafc;
+--color-footer: #1e293b;
 --font-heading: 'FE The Professional', sans-serif;
 ```
 
