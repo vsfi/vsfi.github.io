@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Заявка на участие в VSFI</title>
+        <meta name="description" content="Заявка на участие в VSFI" />
+        <meta name="keywords" content="vsfi, заявка на участие, самара" />
+        <meta property="og:title" content="Заявка на участие" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Заявка на участие VSFI" />
+        <meta property="og:image" content="https://vsfi.org/img/logo@3x.png" />
+        <link rel="stylesheet" href="/css/style.css" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111652431-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-111652431-1');
+            gtag('event', 'page_view', {
+                event_callback: function () {
+                    setTimeout(function () {
+                        window.location = 'https://forms.gle/7pfgnNYbR8oKoN988';
+                    }, 150);
+                }
+            });
+        </script>
+    </head>
+    <body
+        style="
+            padding-top: 0;
+            background: var(--color-bg-alt);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.125rem;
+        "
+    >
+        <div class="container">
+            <p>
+                Если не произошло перенаправление на страницу с анкетой — пожалуйста, используйте
+                <a href="https://forms.gle/7pfgnNYbR8oKoN988">ссылку</a>
+            </p>
+        </div>
+    </body>
+</html>

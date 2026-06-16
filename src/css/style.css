@@ -1,0 +1,547 @@
+/*====================================*/
+/* VSFI — Design tokens */
+/*====================================*/
+
+:root {
+    --color-accent: #3b82f6;
+    --color-accent-dark: #2563eb;
+    --color-accent-light: #dbeafe;
+    --color-bg: #ffffff;
+    --color-bg-alt: #f8fafc;
+    --color-footer: #1e293b;
+    --color-text: #1e293b;
+    --color-text-muted: #64748b;
+    --color-white: #ffffff;
+    --font-heading: 'FE The Professional', sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --max-width: 1100px;
+    --nav-height: 64px;
+    --banner-height: 44px;
+}
+
+/*====================================*/
+/* Font face */
+/*====================================*/
+
+@font-face {
+    font-family: 'FE The Professional';
+    src: url('../fonts/FETHEPROFESSIONAL-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*====================================*/
+/* Reset & base */
+/*====================================*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    font-size: 100%;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.7;
+    padding-top: calc(var(--nav-height) + var(--banner-height));
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--color-accent-dark);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.25;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+/*====================================*/
+/* Announcement banner */
+/*====================================*/
+
+.announcement-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--banner-height);
+    background: var(--color-accent);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    z-index: 1000;
+}
+
+.announcement-banner a {
+    color: var(--color-white);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.announcement-banner a:hover {
+    color: var(--color-accent-light);
+}
+
+/*====================================*/
+/* Navbar */
+/*====================================*/
+
+.navbar {
+    position: fixed;
+    top: var(--banner-height);
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    z-index: 999;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.navbar-logo {
+    flex-shrink: 0;
+}
+
+.navbar-logo {
+    color: var(--color-accent);
+}
+
+.navbar-logo svg {
+    height: 160px;
+    width: auto;
+}
+
+.navbar-logo svg path {
+    fill: currentColor;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 0.25rem;
+}
+
+.navbar-links a {
+    display: block;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-text);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    border-radius: 4px;
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+
+.navbar-links a:hover {
+    background: var(--color-accent-light);
+    color: var(--color-accent);
+}
+
+.navbar-links .nav-bashwars {
+    color: var(--color-accent);
+}
+
+/*====================================*/
+/* Hero */
+/*====================================*/
+
+#home {
+    background: var(--color-bg);
+    padding: 7rem 0 5rem;
+    text-align: center;
+}
+
+.hero-logo {
+    max-width: 580px;
+    margin: 0 auto 2.5rem;
+}
+
+.hero-logo svg {
+    width: 100%;
+    height: auto;
+    color: var(--color-accent);
+}
+
+.hero-logo svg path {
+    fill: currentColor;
+}
+
+.hero-tagline {
+    max-width: 560px;
+    margin: 0 auto 3rem;
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.85;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.875rem 2.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-body);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-accent);
+}
+
+.btn-primary:hover {
+    background: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
+    color: var(--color-white);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.btn-outline:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+}
+
+.hero-scroll {
+    margin-top: 3.5rem;
+    opacity: 0.35;
+    transition: opacity 0.2s;
+}
+
+.hero-scroll:hover {
+    opacity: 0.7;
+}
+
+/*====================================*/
+/* Rules section */
+/*====================================*/
+
+#rules {
+    background: var(--color-bg-alt);
+}
+
+.features-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 5rem;
+    align-items: center;
+}
+
+.features-images img {
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.features-text h2 {
+    margin-bottom: 1.75rem;
+}
+
+.features-text p {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+}
+
+/*====================================*/
+/* Application section */
+/*====================================*/
+
+#apply {
+    background: var(--color-bg);
+    text-align: center;
+}
+
+#apply .container {
+    max-width: 680px;
+}
+
+#apply p {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+}
+
+#apply a {
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+/*====================================*/
+/* How it works section */
+/*====================================*/
+
+#how-it-works {
+    background: var(--color-bg-alt);
+}
+
+#how-it-works .container {
+    max-width: 880px;
+}
+
+#how-it-works p {
+    line-height: 1.85;
+    margin-bottom: 1.25rem;
+}
+
+.video-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 8px;
+}
+
+/*====================================*/
+/* Partners */
+/*====================================*/
+
+.partners-section {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.partners-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 90px;
+}
+
+.partner-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.65;
+    transition:
+        opacity 0.25s,
+        filter 0.25s;
+}
+
+a.partner-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/*====================================*/
+/* Gallery */
+/*====================================*/
+
+#gallery {
+    background: var(--color-bg);
+    text-align: center;
+}
+
+#gallery .section-intro {
+    margin-bottom: 2rem;
+}
+
+#gallery .section-intro p {
+    color: var(--color-text-muted);
+}
+
+.embla {
+    overflow: hidden;
+}
+
+.embla__container {
+    display: flex;
+    gap: 1rem;
+}
+
+.embla__slide {
+    flex: 0 0 220px;
+    min-width: 0;
+}
+
+.embla__slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    transition: opacity 0.25s;
+}
+
+.embla__slide a:hover img {
+    opacity: 0.8;
+}
+
+/*====================================*/
+/* Footer */
+/*====================================*/
+
+#footer {
+    background: var(--color-footer);
+    color: var(--color-white);
+    padding: 4.5rem 0 3.5rem;
+}
+
+#footer h3 {
+    color: var(--color-white);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+#footer p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
+}
+
+#footer a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#footer a:hover {
+    color: var(--color-white);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 3rem;
+}
+
+.footer-est {
+    margin-top: 1rem;
+    font-size: 0.8rem !important;
+    opacity: 0.45;
+    letter-spacing: 0.04em;
+}
+
+.footer-social {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 0.25rem;
+}
+
+.footer-social img {
+    width: 32px;
+    height: 32px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.footer-social img:hover {
+    opacity: 1;
+}
+
+/*====================================*/
+/* Scroll animations */
+/*====================================*/
+
+.animate {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
