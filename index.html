@@ -69,17 +69,18 @@
         })(document, window, 'yandex_metrika_callbacks');
     </script>
 </head>
-<body>
+<body{% if not signUpOpened %} style="--banner-height: 0px"{% endif %}>
     <noscript>
         <div>
             <img src="https://mc.yandex.ru/watch/47156055" style="position: absolute; left: -9999px" alt="">
         </div>
     </noscript>
 
-    <!-- Announcement banner -->
+    {% if signUpOpened %}
     <header class="announcement-banner">
         Открыта регистрация на VSFI—2026!&nbsp;<a href="reg/" target="_blank">Подать заявку на участие</a>
     </header>
+    {% endif %}
 
     <!-- Navbar -->
     <nav class="navbar">

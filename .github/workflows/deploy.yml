@@ -24,6 +24,8 @@ jobs:
 
             - run: npm ci
             - run: npm run build
+              env:
+                  SIGN_UP_OPENED: ${{ vars.SIGN_UP_OPENED }}
 
             - uses: actions/configure-pages@v4
 

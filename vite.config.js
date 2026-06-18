@@ -7,6 +7,10 @@ function loadSiteData() {
     return JSON.parse(readFileSync('./data/site.json', 'utf-8'));
 }
 
+function showAnnouncement() {
+    return process.env.SIGN_UP_OPENED === 'true';
+}
+
 export default defineConfig({
     base: './',
     appType: 'mpa',
@@ -14,7 +18,9 @@ export default defineConfig({
     plugins: [
         nunjucks({
             templatesDir: '.',
-            variables: { '*': loadSiteData() }
+            variables: {
+                '*': { ...loadSiteData(), signUpOpened: showAnnouncement() }
+            }
         }),
         {
             name: 'dev-server-config',
@@ -36,7 +42,9 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                main: resolve(__dirname, 'index.html')
+                main: resolve(__dirname, 'index.html'),
+                'bashwars/index': resolve(__dirname, 'bashwars/index.html'),
+                'reg/index': resolve(__dirname, 'reg/index.html')
             }
         },
         outDir: 'dist'

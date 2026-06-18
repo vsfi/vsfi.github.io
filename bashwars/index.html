@@ -83,16 +83,18 @@
         </script>
         <!-- /Yandex.Metrika counter -->
     </head>
-    <body class="page-bashwars">
+    <body class="page-bashwars"{% if not signUpOpened %} style="--banner-height: 0px"{% endif %}>
         <noscript>
             <div>
                 <img src="https://mc.yandex.ru/watch/47156055" style="position: absolute; left: -9999px" alt="" />
             </div>
         </noscript>
 
+        {% if signUpOpened %}
         <header class="announcement-banner">
             <div>Открыта регистрация на VSFI—2026! <a href="../reg/" target="_blank">Подать заявку на участие</a></div>
         </header>
+        {% endif %}
 
         <img class="logo" src="../img/bashwars.webp" />
         <div class="text-container">
