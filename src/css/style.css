@@ -125,6 +125,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: var(--font-body);
     font-size: 0.875rem;
     font-weight: 600;
     z-index: 1000;
