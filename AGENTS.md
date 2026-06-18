@@ -60,3 +60,31 @@ npm run format:check  # check formatting without writing
 ## Image config
 
 Edit `data/site.json` to change gallery images or the rules section image. No code changes needed. Rebuild after editing.
+
+### Gallery images
+
+`public/img/gallery/` — WebP format, metadata stripped:
+
+```
+gallery/
+  NNN.webp          — full-size: 1600px wide, quality 90
+  thumbs/NNN.webp   — thumbnail: 200px wide, quality 80
+```
+
+NNN is a zero-padded sequence number (001, 002, …). Full images are used in the GLightbox overlay; thumbnails in the Embla carousel.
+
+**Processing recipe:**
+
+```bash
+# Full version
+magick input.jpg -resize 1600x -quality 90 -strip gallery/NNN.webp
+
+# Thumbnail
+magick input.jpg -resize 200x -quality 80 -strip gallery/thumbs/NNN.webp
+```
+
+**Important:** The `-strip` flag removes all EXIF, XMP, ICC profiles, GPS coordinates, camera serial numbers, and other metadata. Gallery images must be anonymous. Verify with `exiftool file.webp` — it should produce no output.
+
+### Rules image
+
+`public/img/rules.webp` — 600px wide WebP, displayed inline in the Rules section (not a lightbox, no thumbnail needed). Process the same way, just at 600px.
