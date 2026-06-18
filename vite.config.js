@@ -11,6 +11,10 @@ function showAnnouncement() {
     return process.env.SIGN_UP_OPENED === 'true';
 }
 
+function isProduction() {
+    return process.env.CI === 'true';
+}
+
 export default defineConfig({
     base: './',
     appType: 'mpa',
@@ -19,7 +23,7 @@ export default defineConfig({
         nunjucks({
             templatesDir: '.',
             variables: {
-                '*': { ...loadSiteData(), signUpOpened: showAnnouncement() }
+                '*': { ...loadSiteData(), signUpOpened: showAnnouncement(), isProduction: isProduction() }
             }
         }),
         {

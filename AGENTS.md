@@ -68,6 +68,15 @@ npm run build                        # banner hidden (default)
 
 Set `SIGN_UP_OPENED` in the repository variables: **Settings → Secrets and variables → Actions → Variables**. The workflow reads it from `vars.SIGN_UP_OPENED`.
 
+## Tracking scripts
+
+Google Analytics and Yandex Metrika scripts are included only when running in CI (GitHub Actions sets `CI=true` automatically). During local dev and manual builds they are excluded.
+
+```bash
+CI=true npm run build   # tracking included
+npm run build            # tracking excluded (default)
+```
+
 ## data/site.json
 
 All editable content lives here. No code changes needed when editing.
