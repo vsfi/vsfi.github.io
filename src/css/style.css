@@ -587,15 +587,36 @@ a.partner-logo:hover img {
     margin-top: 0.25rem;
 }
 
-.footer-social img {
-    width: 32px;
-    height: 32px;
-    opacity: 0.6;
-    transition: opacity 0.2s;
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 1.25rem;
+    transition: background 0.2s, color 0.2s;
 }
 
-.footer-social img:hover {
-    opacity: 1;
+.footer-social-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.footer-social-link--vk {
+    color: #0077ff;
+}
+
+.footer-social-link--vk:hover {
+    color: #3399ff;
+}
+
+.footer-social-link--tg {
+    color: #26a5e4;
+}
+
+.footer-social-link--tg:hover {
+    color: #4db8e9;
 }
 
 /*====================================*/
