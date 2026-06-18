@@ -66,7 +66,7 @@ SIGN_UP_OPENED=true npm run build   # banner shown
 npm run build                        # banner hidden (default)
 ```
 
-In the GitHub Pages deploy workflow, set `SIGN_UP_OPENED` as an environment variable in the **github-pages** environment. The workflow already reads it from `vars.SIGN_UP_OPENED`.
+Set `SIGN_UP_OPENED` in the repository variables: **Settings → Secrets and variables → Actions → Variables**. The workflow reads it from `vars.SIGN_UP_OPENED`.
 
 ## data/site.json
 

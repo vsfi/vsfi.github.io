@@ -70,7 +70,7 @@ SIGN_UP_OPENED=true npm run build   # banner shown
 npm run build                        # banner hidden (default)
 ```
 
-In the [deploy workflow](.github/workflows/deploy.yml), the build step reads it from `vars.SIGN_UP_OPENED`. Set this variable in the **github-pages** environment settings (repo Settings → Environments → github-pages).
+In the [deploy workflow](.github/workflows/deploy.yml), the build step reads it from `vars.SIGN_UP_OPENED`. Set this variable in the repository variables: **Settings → Secrets and variables → Actions → Variables**.
 
 ## Gallery images
 
