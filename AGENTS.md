@@ -12,14 +12,14 @@ Static landing page for VSFI (system administration competitions), hosted on Git
 index.html              — main page (Nunjucks template)
 vite.config.js          — Vite build config
 package.json            — npm scripts and dependencies
-data/site.json          — editable image config (gallery + rules)
+data/site.json          — editable site config
 src/
   js/main.js            — JS entry (Embla, GLightbox, scroll animations)
   css/style.css         — main styles (design tokens, all sections)
   css/responsive.css    — breakpoints (768px, 480px)
+bashwars/index.html     — Bashwars page (Nunjucks template)
+reg/index.html          — Google Forms redirect (Nunjucks template)
 public/                 — static assets copied verbatim to dist/
-  bashwars/index.html   — Bashwars page
-  reg/index.html        — Google Forms redirect
   css/                  — styles for static pages
   img/                  — images, gallery photos, partners, favicons
   fonts/                — "FE The Professional" woff2
@@ -55,6 +55,29 @@ npm run format:check  # check formatting without writing
 --color-bg-alt: #f8fafc;
 --color-footer: #1e293b;
 --font-heading: 'FE The Professional', sans-serif;
+```
+
+## Announcement banner
+
+The sticky "registration open" banner on the main page and /bashwars/ is controlled by the `SIGN_UP_OPENED` env var:
+
+```bash
+SIGN_UP_OPENED=true npm run build   # banner shown
+npm run build                        # banner hidden (default)
+```
+
+In the GitHub Pages deploy workflow, set `SIGN_UP_OPENED` as an environment variable in the **github-pages** environment. The workflow already reads it from `vars.SIGN_UP_OPENED`.
+
+## data/site.json
+
+All editable content lives here. No code changes needed when editing.
+
+```jsonc
+{
+    "signUpFormUrl": "https://forms.gle/...",  // Google Forms URL for /reg/ redirect
+    "rulesImage": "img/rules.webp",            // image for Rules section
+    // ...videos, testimonials, partners, gallery
+}
 ```
 
 ## Image config
