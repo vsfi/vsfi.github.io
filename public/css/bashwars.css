@@ -1,0 +1,29 @@
+.page-bashwars {
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+    color: aliceblue;
+    padding-top: var(--banner-height);
+}
+
+.page-bashwars a {
+    color: aliceblue;
+    text-decoration: underline;
+}
+
+.page-bashwars h1 {
+    font-size: 6vw;
+    line-height: 1vw;
+}
+
+.text-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 100%;
+}
+
+.text {
+    font-size: 3vw;
+}

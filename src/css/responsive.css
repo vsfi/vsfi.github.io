@@ -1,0 +1,125 @@
+/*====================================*/
+/* VSFI — Responsive */
+/*====================================*/
+
+/* Tablet — 768px and below */
+@media (max-width: 768px) {
+    html {
+        font-size: 95%;
+    }
+
+    .announcement-banner {
+        font-size: 0.75rem;
+    }
+
+    body {
+        padding-top: calc(var(--nav-height) + var(--banner-height));
+    }
+
+    .navbar-logo svg {
+        height: 80px;
+    }
+
+    .navbar-links a {
+        padding: 0.35rem 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    #home {
+        padding: 5rem 0 3.5rem;
+    }
+
+    .hero-logo {
+        max-width: 360px;
+    }
+
+    .hero-tagline {
+        font-size: 1rem;
+    }
+
+    .features-row {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    .video-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .partners-section {
+        margin-top: 2.5rem;
+        padding-top: 2rem;
+    }
+
+    .partner-logo {
+        width: 130px;
+        height: 75px;
+    }
+
+    .partners-row {
+        gap: 1rem 1.5rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .footer-col:first-child {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+}
+
+/* Small mobile — 480px and below */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    #home {
+        padding: 4rem 0 2.5rem;
+    }
+
+    .hero-logo {
+        max-width: 280px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .partner-logo {
+        width: 110px;
+        height: 65px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}

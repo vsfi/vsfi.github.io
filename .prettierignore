@@ -1,0 +1,10 @@
+index.html
+node_modules
+dist
+public/img/fgal
+public/img/fgal02
+public/img/*.png
+public/img/*.webp
+public/*.png
+public/*.ico
+public/fonts
