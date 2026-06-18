@@ -45,6 +45,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-height) + var(--banner-height));
     -webkit-font-smoothing: antialiased;
     font-size: 100%;
 }
@@ -489,6 +490,12 @@ section {
     justify-content: center;
     width: 160px;
     height: 90px;
+    cursor: default;
+    user-select: none;
+}
+
+a.partner-logo {
+    cursor: pointer;
 }
 
 .partner-logo img {
@@ -502,7 +509,7 @@ section {
         filter 0.25s;
 }
 
-a.partner-logo:hover img {
+.partner-logo:hover img {
     filter: grayscale(0%);
     opacity: 1;
 }
