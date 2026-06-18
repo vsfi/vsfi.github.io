@@ -34,7 +34,7 @@ All editable content lives here. No code changes needed when editing.
 
 ```jsonc
 {
-    "rulesImage": "img/fgal/001big.jpg", // hero image for Rules section
+    "rulesImage": "img/rules.webp", // image for Rules section (600px wide WebP)
     "videos": [
         "gEtFDT5maLg", // YouTube video IDs
         "sk7-xs2rEyI"
@@ -50,7 +50,7 @@ All editable content lives here. No code changes needed when editing.
             { "img": "img/partners/ctech.svg", "alt": "CTech" }
         ]
     ],
-    "gallery": [{ "thumb": "img/fgal02/025sm.jpg", "full": "img/fgal02/025big.jpg" }]
+    "gallery": [{ "thumb": "img/gallery/thumbs/036.webp", "full": "img/gallery/036.webp" }]
 }
 ```
 
@@ -58,6 +58,45 @@ All editable content lives here. No code changes needed when editing.
 - **partners** — nested arrays. One inner array = one row. `url` is optional (omit for a plain logo).
 - **gallery** — `thumb` for the carousel, `full` for lightbox. Reorder, add, or remove.
 - **testimonials** — three text blocks used across the page.
+
+## Gallery images
+
+Gallery photos are WebP format in `public/img/gallery/`:
+
+```
+public/img/gallery/
+  001.webp          — full-size (1600px wide, quality 90)
+  002.webp
+  ...
+  thumbs/
+    001.webp        — thumbnail (200px wide, quality 80)
+    002.webp
+    ...
+```
+
+### Processing new photos
+
+Use ImageMagick to resize and strip metadata:
+
+```bash
+# Full version: 1600px wide
+magick input.jpg -resize 1600x -quality 90 -strip public/img/gallery/NNN.webp
+
+# Thumbnail: 200px wide
+magick input.jpg -resize 200x -quality 80 -strip public/img/gallery/thumbs/NNN.webp
+```
+
+The `-strip` flag removes all EXIF, XMP, ICC profiles, GPS, camera serial numbers, and other metadata. Always strip — gallery images must be anonymous.
+
+Verify metadata is gone:
+
+```bash
+exiftool public/img/gallery/NNN.webp  # should produce no output
+```
+
+### Rules image
+
+The rules section image (`rulesImage` in site.json) is 600px wide WebP in `public/img/rules.webp`. Process the same way but at 600px — it's displayed inline, not in a lightbox, so it doesn't need a thumbnail.
 
 ## Deploy
 
