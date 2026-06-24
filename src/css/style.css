@@ -641,3 +641,18 @@ a.partner-logo {
     color: #4db8e9;
 }
 
+.footer-social-link--yt {
+    color: #ff0000;
+}
+
+.footer-social-link--yt:hover {
+    color: #ff3333;
+}
+
+.footer-social-link--gh {
+    color: #ffffff;
+}
+
+.footer-social-link--gh:hover {
+    color: #cccccc;
+}
