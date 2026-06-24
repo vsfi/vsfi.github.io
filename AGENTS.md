@@ -12,14 +12,14 @@ Static landing page for VSFI (system administration competitions), hosted on Git
 index.html              — main page (Nunjucks template)
 vite.config.js          — Vite build config
 package.json            — npm scripts and dependencies
-data/site.json          — editable image config (gallery + rules)
+data/site.json          — editable site config
 src/
   js/main.js            — JS entry (Embla, GLightbox, scroll animations)
   css/style.css         — main styles (design tokens, all sections)
   css/responsive.css    — breakpoints (768px, 480px)
+bashwars/index.html     — Bashwars page (Nunjucks template)
+reg/index.html          — Google Forms redirect (Nunjucks template)
 public/                 — static assets copied verbatim to dist/
-  bashwars/index.html   — Bashwars page
-  reg/index.html        — Google Forms redirect
   css/                  — styles for static pages
   img/                  — images, gallery photos, partners, favicons
   fonts/                — "FE The Professional" woff2
@@ -55,6 +55,38 @@ npm run format:check  # check formatting without writing
 --color-bg-alt: #f8fafc;
 --color-footer: #1e293b;
 --font-heading: 'FE The Professional', sans-serif;
+```
+
+## Announcement banner
+
+The sticky "registration open" banner on the main page and /bashwars/ is controlled by the `SIGN_UP_OPENED` env var:
+
+```bash
+SIGN_UP_OPENED=true npm run build   # banner shown
+npm run build                        # banner hidden (default)
+```
+
+Set `SIGN_UP_OPENED` in the repository variables: **Settings → Secrets and variables → Actions → Variables**. The workflow reads it from `vars.SIGN_UP_OPENED`.
+
+## Tracking scripts
+
+Google Analytics and Yandex Metrika scripts are included only when running in CI (GitHub Actions sets `CI=true` automatically). During local dev and manual builds they are excluded.
+
+```bash
+CI=true npm run build   # tracking included
+npm run build            # tracking excluded (default)
+```
+
+## data/site.json
+
+All editable content lives here. No code changes needed when editing.
+
+```jsonc
+{
+    "signUpFormUrl": "https://forms.gle/...",  // Google Forms URL for /reg/ redirect
+    "rulesImage": "img/rules.webp",            // image for Rules section
+    // ...videos, testimonials, partners, gallery
+}
 ```
 
 ## Image config

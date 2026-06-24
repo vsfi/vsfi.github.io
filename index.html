@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
+    {% if isProduction %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111652431-1"></script>
     <script>
@@ -68,18 +69,22 @@
             } else { f(); }
         })(document, window, 'yandex_metrika_callbacks');
     </script>
+    {% endif %}
 </head>
-<body>
+<body{% if not signUpOpened %} style="--banner-height: 0px"{% endif %}>
+    {% if isProduction %}
     <noscript>
         <div>
             <img src="https://mc.yandex.ru/watch/47156055" style="position: absolute; left: -9999px" alt="">
         </div>
     </noscript>
+    {% endif %}
 
-    <!-- Announcement banner -->
+    {% if signUpOpened %}
     <header class="announcement-banner">
         Открыта регистрация на VSFI—2026!&nbsp;<a href="reg/" target="_blank">Подать заявку на участие</a>
     </header>
+    {% endif %}
 
     <!-- Navbar -->
     <nav class="navbar">

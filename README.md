@@ -15,6 +15,8 @@ npm run format    # auto-format with Prettier
 
 ```
 index.html          — main page (Nunjucks template)
+bashwars/index.html — Bashwars page (Nunjucks template)
+reg/index.html      — Google Forms redirect (Nunjucks template)
 vite.config.js      — Vite config
 data/site.json      — editable content
 src/
@@ -24,8 +26,6 @@ src/
 public/             — static assets (copied verbatim to dist/)
   img/              — images, gallery photos, partners
   fonts/            — FE The Professional woff2
-  bashwars/         — Bashwars sub-page
-  reg/              — registration redirect
 ```
 
 ## data/site.json
@@ -34,7 +34,8 @@ All editable content lives here. No code changes needed when editing.
 
 ```jsonc
 {
-    "rulesImage": "img/rules.webp", // image for Rules section (600px wide WebP)
+    "signUpFormUrl": "https://forms.gle/...",  // Google Forms URL for /reg/ redirect
+    "rulesImage": "img/rules.webp",            // image for Rules section (600px wide WebP)
     "videos": [
         "gEtFDT5maLg", // YouTube video IDs
         "sk7-xs2rEyI"
@@ -54,10 +55,22 @@ All editable content lives here. No code changes needed when editing.
 }
 ```
 
+- **signUpFormUrl** — Google Forms destination for the /reg/ redirect page.
 - **videos** — array of YouTube IDs. Add more, they auto-grid.
 - **partners** — nested arrays. One inner array = one row. `url` is optional (omit for a plain logo).
 - **gallery** — `thumb` for the carousel, `full` for lightbox. Reorder, add, or remove.
 - **testimonials** — three text blocks used across the page.
+
+## Announcement banner
+
+The sticky "registration open" banner on the main page and /bashwars/ is controlled by the `SIGN_UP_OPENED` env var:
+
+```bash
+SIGN_UP_OPENED=true npm run build   # banner shown
+npm run build                        # banner hidden (default)
+```
+
+In the [deploy workflow](.github/workflows/deploy.yml), the build step reads it from `vars.SIGN_UP_OPENED`. Set this variable in the repository variables: **Settings → Secrets and variables → Actions → Variables**.
 
 ## Gallery images
 

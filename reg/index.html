@@ -12,6 +12,7 @@
         <meta property="og:image" content="https://vsfi.org/img/logo@3x.png" />
         <link rel="stylesheet" href="/css/style.css" />
 
+        {% if isProduction %}
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111652431-1"></script>
         <script>
@@ -24,11 +25,12 @@
             gtag('event', 'page_view', {
                 event_callback: function () {
                     setTimeout(function () {
-                        window.location = 'https://forms.gle/7pfgnNYbR8oKoN988';
+                        window.location = '{{ signUpFormUrl }}';
                     }, 150);
                 }
             });
         </script>
+        {% endif %}
     </head>
     <body
         style="
@@ -45,7 +47,7 @@
         <div class="container">
             <p>
                 Если не произошло перенаправление на страницу с анкетой — пожалуйста, используйте
-                <a href="https://forms.gle/7pfgnNYbR8oKoN988">ссылку</a>
+                <a href="{{ signUpFormUrl }}">ссылку</a>
             </p>
         </div>
     </body>
