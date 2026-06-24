@@ -8,16 +8,13 @@
     },
     "partners": [
         [
-            { "img": "img/partners/ssau.png", "alt": "SSAU", "url": "https://ssau.ru" },
-            { "img": "img/partners/dit.svg", "alt": "DIT", "url": "https://dit.samregion.ru" },
-            { "img": "img/partners/psuti.svg", "alt": "PSUTI", "url": "https://psuti.ru" }
+            { "img": "img/partners/ssau.png", "alt": "Самарский университет", "url": "https://ssau.ru" },
+            { "img": "img/partners/dit.svg", "alt": "Министерство цифрового развития и связи Самарской области", "url": "https://dit.samregion.ru" },
+            { "img": "img/partners/psuti.svg", "alt": "Поволжский государственный университет телекоммуникаций и информатики", "url": "https://psuti.ru" }
         ],
         [
-            { "img": "img/partners/pt.svg", "alt": "PT", "url": "https://www.ptsecurity.com" },
-            { "img": "img/partners/solar.svg", "alt": "Solar", "url": "https://rt-solar.ru/" },
-            { "img": "img/partners/zainform.svg", "alt": "Zainform", "url": "http://zainform.ru/" },
-            { "img": "img/partners/ctech.svg", "alt": "CTech" },
-            { "img": "img/partners/ituniverse.svg", "alt": "IT Universe", "url": "https://it-universe.ru/" }
+            { "img": "img/partners/solar.svg", "alt": "Солар", "url": "https://rt-solar.ru/" },
+            { "img": "img/partners/ctech.svg", "alt": "Компьютерные технологии" }
         ]
     ],
     "gallery": [
