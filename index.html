@@ -207,6 +207,12 @@
                     <iframe src="https://www.youtube.com/embed/{{ id }}" allowfullscreen></iframe>
                     {% endfor %}
                 </div>
+                <script>
+                    var c = new AbortController();
+                    setTimeout(function() { c.abort(); }, 1000);
+                    fetch('https://www.youtube.com/favicon.ico', { mode: 'no-cors', signal: c.signal })
+                      .catch(function() { document.querySelector('.video-wrapper').style.display = 'none'; });
+                </script>
 
                 <p>
                     Цели — те же, что и всегда на VSFI: поднять инфраструктуру и сделать её более надежной и
